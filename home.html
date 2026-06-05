@@ -1435,14 +1435,11 @@ function showEndScreen() {
   document.getElementById('endAcc').textContent = acc + '%';
   document.getElementById('wrongCount').textContent = state.wrongList.length;
 
-  const emoji = acc >= 90 ? '🏆' : acc >= 70 ? '🎉' : acc >= 50 ? '📚' : '💪';
-  document.getElementById('endEmoji').textContent = emoji;
   document.getElementById('endSub').textContent =
-    acc >= 90 ? "Outstanding! You're exam ready." :
-    acc >= 70 ? "Good job! Keep practicing." :
-    acc >= 50 ? "Getting there. Review and retry!" :
-    "Keep studying. You've got this!";
-
+  acc >= 90 ? "Outstanding! You're exam ready." :
+  acc >= 70 ? "Good job! Keep practicing." :
+  acc >= 50 ? "Getting there. Review and retry!" :
+  "Keep studying. You've got this!";
   const wrongBtn = document.getElementById('wrongAnswersBtn');
   wrongBtn.style.display = state.wrongList.length > 0 ? '' : 'none';
 
